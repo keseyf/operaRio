@@ -14,21 +14,6 @@ export default function About({ dkt }: any) {
         });
     }, []); // run once on mount
 
-    const [xWidth, setXWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        function handleResize() {
-            setXWidth(window.innerWidth);
-        }
-
-        // adiciona o listener
-        window.addEventListener("resize", handleResize);
-
-        // remove o listener quando o componente desmontar
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []); // <- array vazio: executa só uma vez
     return (
         <div id="sobre" className="flex px-15 my-15">
             <div id="sinopse" className="">

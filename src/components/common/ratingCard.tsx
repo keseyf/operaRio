@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BiStar } from "react-icons/bi";
 import ScrollReveal from "scrollreveal";
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BiDownArrow, BiDownArrowAlt } from "react-icons/bi";
+import { BiDownArrowAlt } from "react-icons/bi";
 
 export default function Main() {
 
