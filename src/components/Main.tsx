@@ -15,7 +15,7 @@ export default function Main() {
         <main id="main" className="relative flex items-center justify-center">
             <img 
                 className="w-screen h-[calc(100vh-52px)] object-cover object-center" 
-                src="./src/assets/mainPhoto.png" 
+                src="/images/mainPhoto.png" 
                 alt="" 
             />
             <div className="absolute flex items-center justify-center flex-col h-full w-full bg-black/80">

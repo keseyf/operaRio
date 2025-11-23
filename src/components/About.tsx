@@ -66,13 +66,13 @@ export default function About({ dkt }: any) {
                 </ul>
                 <ul className="flex justify-center items-center gap-10 w-full flex-col lg:flex-row">
                     <li>
-                        <Card image={"./src/assets/artesanato.jpg"} text="“Oficinas de artesanato que desenvolvem habilidades e despertam novas possibilidades.”" position="top" />
+                        <Card image={"/images/artesanato.jpg"} text="“Oficinas de artesanato que desenvolvem habilidades e despertam novas possibilidades.”" position="top" />
                     </li>
                     <li>
-                        <Card image={"./src/assets/maos.jpg"} text="“Um projeto construído junto com a comunidade, para a comunidade.”" position="top" />
+                        <Card image={"/images/maos.jpg"} text="“Um projeto construído junto com a comunidade, para a comunidade.”" position="top" />
                     </li>
                     <li>
-                        <Card image={"./src/assets/voluntario.jpg"} text="“Aulas guiadas por voluntários comprometidos em transformar vidas.”" position="top" />
+                        <Card image={"/images/voluntario.jpg"} text="“Aulas guiadas por voluntários comprometidos em transformar vidas.”" position="top" />
                     </li>
                 </ul>
                 <div className="mt-20 flex items-center justify-center flex-col">
@@ -83,7 +83,7 @@ export default function About({ dkt }: any) {
                         <li>
                             <RatingCard
                                 dkt={dkt}
-                                image={"./src/assets/mae1.jpg"}
+                                image={"/images/mae1.jpg"}
                                 name="Ana Souza, 24 anos"
                                 text="Eu conheci a OPERA RIO pelo TikTok, vi um vídeo sobre as oficinas de artesanato e decidi levar meu filho. Ele adorou e agora está super motivado a aprender coisas novas."
                             />
@@ -91,7 +91,7 @@ export default function About({ dkt }: any) {
                         <li>
                             <RatingCard
                                 dkt={dkt}
-                                image={"./src/assets/jovem1.jpg"}
+                                image={"/images/jovem1.jpg"}
                                 name="Carlos Henrique, 16 anos"
                                 text="Uma amiga me falou sobre as aulas da ONG. No começo eu pensei que ia ser só mais uma atividade, mas aprendi a fazer esculturas e me senti parte de algo positivo."
                             />
@@ -99,14 +99,14 @@ export default function About({ dkt }: any) {
                         <li>
                             <RatingCard
                                 dkt={dkt}
-                                image={"./src/assets/mae2.jpg"}
+                                image={"/images/mae2.jpg"}
                                 name="Mariana Lima, 22 anos"
                                 text="Descobri a ONG quando procurava algo para ocupar meu tempo e o do meu filho. Hoje participamos das oficinas juntos, e isso mudou completamente nossa rotina."
                             />
                         </li>
                         <li>
                             <RatingCard
-                                image={"./src/assets/jovem2.jpg"}
+                                image={"/images/jovem2.jpg"}
                                 name="Lucas Pereira, 17 anos"
                                 text="Vi um post da ONG no Instagram e decidi tentar. As aulas são muito mais do que aprender técnicas, é sobre conhecer pessoas e se sentir apoiado."
                             />
