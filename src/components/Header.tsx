@@ -6,7 +6,7 @@ export default function Header({ dkt, setDarkTheme }: any) {
     return (
         <header id="heder" className={`z-1000 shadow-lg ${dkt ? "bg-black/80!" : "bg-white/85!"} duration-150 backdrop-blur-xl sticky top-0 left-0 flex w-full p-3 justify-between items-center`}>
             <a href="/">
-                <img className="w-20 hover:scale-95 duration-150" src={`${dkt ? "/images/operalogo.png" : "./src/assets/operalogo2.png"}`} alt="" />
+                <img className="w-20 hover:scale-95 duration-150" src={`${dkt ? "/images/operalogo.png" : "/images/operalogo2.png"}`} alt="" />
             </a>
            <nav>
                 <ul className="flex items-center gap-5">
