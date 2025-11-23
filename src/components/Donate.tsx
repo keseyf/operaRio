@@ -51,7 +51,7 @@ export default function Donate({ onDonateSuccess,dkt }: { onDonateSuccess?: () =
   return (
     <>
       {/* SEÇÃO PRINCIPAL */}
-      <div className="bg-accent1-700 text-white p-10 flex flex-col items-center justify-center text-center gap-6 mt-10 shadow-lg">
+      <div id="doacao" className="bg-accent1-700 text-white p-10 flex flex-col items-center justify-center text-center gap-6 mt-10 shadow-lg">
 
         <h2 className="text-3xl font-bold">Quer ajudar a transformar vidas?</h2>
 

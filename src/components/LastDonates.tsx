@@ -33,45 +33,49 @@ export default function LastDonates({ dkt, donates }: { dkt: boolean, donates: D
     return (
         <div
             id="donates"
-            className={`w-full py-6 ${
-                dkt ? "bg-black/80 text-white" : "bg-white text-neutral-900"
-            }`}
+            className={`w-full flex items-center justify-center flex-col py-6 ${dkt ? " text-white" : "bg-white text-neutral-900"
+                }`}
         >
 
-            <h2 className="text-2xl font-bold mb-6 text-center">Últimas 10 Doações</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center w-fit px-4 py-1">Últimas 10 Doações</h2>
 
             {/* FLEX COM WRAP */}
             <div className="mx-auto flex flex-wrap justify-center gap-4 max-w-4xl">
 
-                {donates.map((item, index) => (
+                {donates.length > 0 ? (donates.map((item, index) => (
                     <div
                         id={`donate-card-${index}`}
                         key={index}
                         className={`p-4 rounded-lg border shadow-sm
-                            w-72 sm:w-80
+                            w-92 sm:w-80
                             ${dkt ? "border-neutral-700 bg-neutral-800" : "border-neutral-300 bg-neutral-100"}
                         `}
                     >
 
                         {/* Cabeçalho com posição / nome / valor */}
-                        <div className="flex justify-between items-center mb-1">
-                            <span className="font-bold text-lg">{index + 1}º</span>
+                        <div className="flex flex-col justify-between mb-1">
+                            <div className="w-full flex flex-row-reverse items-center justify-between">
 
-                            <span className="font-semibold truncate max-w-[70px]">
+                            <span className={`font-bold text-sm ${dkt ? "text-neutral-500" : "text-neutral-400"}`}>{index + 1}º</span>
+
+                            <span className="font-semibold text-sm truncate ">
                                 {item.name.trim()}
                             </span>
-
-                            <span className="font-bold text-green-600">
-                                R$ {item.donate}
+                            </div>
+                            <span className={`font-bold my-3 text-sm ${dkt ? "text-neutral-300" : "text-neutral-700"}`}>
+                              <span className="text-green-600 ">R${item.donate}</span>
                             </span>
                         </div>
 
                         {/* Mensagem */}
-                        {item.message && item.message.trim() !== "" && (
-                            <p className="text-sm mt-1 opacity-80 break-words">
+                        <p className={`text-xs ${dkt ? "text-neutral-400" : "text-neutral-600"} px-1`}>
+                                Mensagem:
+                            </p>
+                        {item.message && item.message.trim() !== "" ? (
+                            <p className={`text-sm mt-1 ${dkt ? "text-white" : "text-neutral-900"} opacity-80 break-words p-3 border border-neutral-600/30 rounded`}>
                                 {item.message}
                             </p>
-                        )}
+                        ): (<p className="text-sm mt-1 opacity-80 break-words p-3 border border-neutral-600/30 rounded">Nenhuma mensagem adicionada pelo doador.</p>)}
 
                         {/* Data formatada */}
                         <p className="text-xs opacity-60 mt-2">
@@ -84,10 +88,12 @@ export default function LastDonates({ dkt, donates }: { dkt: boolean, donates: D
                             })}
                         </p>
                     </div>
-                ))}
+                ))) : (<div>
+                    <h1 className={`${dkt ? "text-neutral-900" : "text-neutral-500"} underline text-sm px-3`}>Nenhuma doação ainda :(</h1>
+                </div>)}
 
             </div>
-
+                    <p className={`${dkt ? "text-neutral-400" : "text-neutral-600"} my-5`}>Acabou Por aqui...</p>
         </div>
     );
 }
