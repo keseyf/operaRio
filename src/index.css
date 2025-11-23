@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent1-600: #195AFF;
+  --color-accent1-700: #0036BE;
+
+  --color-accent2-600: #F25816;
+  --color-accent2-700: #F25816;
+
+  --font-inter: 'inter', sans-serif;
+
+  --animate-fadeIn: fadeIn 2s ease-in-out;
+
+
+  @keyframes scrollHorizontal {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+
+
+  /* index.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+  @apply font-inter;
+}
+
+/* ------------------------------- */
+/* ANIMAÇÃO DOS DETAILS            */
+/* ------------------------------- */
+
+details>.content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.35s ease;
+}
+
+details[open]>.content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* animação do ícone girando */
+details summary .icon {
+  transition: transform 0.3s ease;
+}
+
+details[open] summary .icon {
+  transform: rotate(180deg);
+}
