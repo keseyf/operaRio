@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Card from "./common/card";
 import RatingCard from "./common/ratingCard";
 import { Accordion } from "./common/accordion";
